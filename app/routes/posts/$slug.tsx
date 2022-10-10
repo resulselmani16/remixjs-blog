@@ -47,17 +47,20 @@ export default function PostSlug() {
         </button>
       </Link>
       <main className="mx-auto max-w-4xl">
-        <h1 className="my-6 border-b-2 text-center text-3xl">{post.title}</h1>
+        <div className="my-6 flex w-full items-end justify-between border-b-2 pb-5">
+          <h1 className="text-center text-3xl">{post.title}</h1>
+          <div className="mt-4">
+            <p>Discover next:</p>
+            <Link
+              className="rounded bg-yellow-500 py-2 px-4 text-white hover:bg-yellow-600 disabled:bg-yellow-300"
+              to={`/posts/${getNextItem(post.slug).slug}`}
+            >
+              {getNextItem(post.slug).title}
+            </Link>
+          </div>{" "}
+        </div>
+
         <div dangerouslySetInnerHTML={{ __html: html }} />
-        <div className="mt-4">
-          Discover: {" "}
-          <Link
-            className="rounded bg-yellow-500 py-2 px-4 text-white hover:bg-yellow-600 disabled:bg-yellow-300"
-            to={`/posts/${getNextItem(post.slug).slug}`}
-          >
-            {getNextItem(post.slug).title}
-          </Link>
-        </div>{" "}
       </main>
     </>
   );

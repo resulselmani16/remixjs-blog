@@ -22,13 +22,15 @@ export default function Posts() {
   const { posts } = useLoaderData();
   return (
     <main>
-      <h1 className="my-6 mb-2 border-b-2 text-center text-3xl">Blogs</h1>
-      <Link
-        to="admin"
-        className="float-right m-2 w-40 cursor-pointer rounded bg-red-400 p-2 text-center font-bold text-white"
-      >
-        Admin
-      </Link>
+      <div className="flex justify-between px-5 border-b-2">
+        <h1 className="my-6 mb-2 text-center text-3xl">Blogs</h1>
+        <Link
+          to="admin"
+          className=" m-4 w-40 cursor-pointer rounded bg-red-400 p-2 text-center font-bold text-white"
+        >
+          Admin
+        </Link>
+      </div>
       <ul className="flex flex-col">
         {posts.map((post: Post) => (
           <Link

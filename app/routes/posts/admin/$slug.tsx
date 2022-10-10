@@ -8,7 +8,7 @@ import {
   useTransition,
 } from "@remix-run/react";
 import { redirect, json } from "@remix-run/node";
-import type {LinksFunction} from "@remix-run/node";
+import type { LinksFunction } from "@remix-run/node";
 import type { ActionFunction, LoaderFunction } from "@remix-run/node";
 import {
   createPost,
@@ -141,19 +141,21 @@ export default function NewPost() {
             </p>
             <br />
             <div>
-              <button
-                onClick={() => setIsEditMode(false)}
-                className="mb-2 mr-4 h-12 w-40 rounded bg-yellow-500 p-2 text-white hover:bg-yellow-600 focus:bg-yellow-400 disabled:bg-yellow-300"
-              >
-                Quit edit mode
-              </button>
               {urlParams.slug !== "new" ? (
-                <Link
-                  className="mt-4 w-40 rounded bg-green-600 p-2 text-white"
-                  to="/posts/admin/new"
-                >
-                  Create New Blog
-                </Link>
+                <>
+                  <button
+                    onClick={() => setIsEditMode(false)}
+                    className="mb-2 mr-4 h-12 w-40 rounded bg-yellow-500 p-2 text-white hover:bg-yellow-600 focus:bg-yellow-400 disabled:bg-yellow-300"
+                  >
+                    Quit edit mode
+                  </button>
+                  <Link
+                    className="mt-4 w-40 rounded bg-green-600 p-2 text-white"
+                    to="/posts/admin/new"
+                  >
+                    Create New Blog
+                  </Link>
+                </>
               ) : null}
             </div>
             <br />
@@ -219,12 +221,16 @@ export default function NewPost() {
               )}
               <button
                 type="submit"
-                onMouseOver={() => isNewPost ? handleHover() : () => {}}
+                onMouseOver={() => (isNewPost ? handleHover() : () => {})}
                 name="intent"
                 value={isNewPost ? "create" : "update"}
                 className={`${
                   hasMargin ? "margin-right-none" : "margin-right"
-                } ${isValid ? "bg-green-500 hover:bg-green-600 focus:bg-green-400 disabled:bg-green-300" : "bg-blue-500 hover:bg-blue-600 focus:bg-blue-400 disabled:bg-blue-300"} rounded  py-2 px-4 text-white disabled:bg-blue-300`}
+                } ${
+                  isValid
+                    ? "bg-green-500 hover:bg-green-600 focus:bg-green-400 disabled:bg-green-300"
+                    : "bg-blue-500 hover:bg-blue-600 focus:bg-blue-400 disabled:bg-blue-300"
+                } rounded  py-2 px-4 text-white disabled:bg-blue-300`}
                 disabled={isCreating || isUpdating}
               >
                 {isNewPost
