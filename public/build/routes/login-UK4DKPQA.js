@@ -1,0 +1,71 @@
+import {
+  require_session
+} from "/build/_shared/chunk-GLWAIFE6.js";
+import {
+  require_auth
+} from "/build/_shared/chunk-GWKZO3TS.js";
+import {
+  Form,
+  require_jsx_dev_runtime,
+  useLoaderData
+} from "/build/_shared/chunk-QEGWQXTZ.js";
+import {
+  __toESM
+} from "/build/_shared/chunk-5KL4PAQL.js";
+
+// app/routes/login.tsx
+var import_auth = __toESM(require_auth());
+var import_session = __toESM(require_session());
+var import_jsx_dev_runtime = __toESM(require_jsx_dev_runtime());
+function LoginPage() {
+  const loaderData = useLoaderData();
+  console.log(loaderData);
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("div", {
+    children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("h1", {
+        children: "Log in to continue"
+      }, void 0, false, {
+        fileName: "app/routes/login.tsx",
+        lineNumber: 33,
+        columnNumber: 7
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(Form, {
+        method: "post",
+        children: [
+          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", {
+            type: "email",
+            name: "email",
+            placeholder: "email",
+            required: true
+          }, void 0, false, {
+            fileName: "app/routes/login.tsx",
+            lineNumber: 35,
+            columnNumber: 7
+          }, this),
+          /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)("input", {
+            type: "password",
+            name: "password",
+            placeholder: "password",
+            autoComplete: "current-password"
+          }, void 0, false, {
+            fileName: "app/routes/login.tsx",
+            lineNumber: 36,
+            columnNumber: 7
+          }, this)
+        ]
+      }, void 0, true, {
+        fileName: "app/routes/login.tsx",
+        lineNumber: 34,
+        columnNumber: 7
+      }, this)
+    ]
+  }, void 0, true, {
+    fileName: "app/routes/login.tsx",
+    lineNumber: 32,
+    columnNumber: 5
+  }, this);
+}
+export {
+  LoginPage as default
+};
+//# sourceMappingURL=/build/routes/login-UK4DKPQA.js.map

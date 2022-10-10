@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../app/routes/posts/login/index.tsx"],
+  "sourcesContent": ["import React from 'react'\n\nconst index = () => {\n  return (\n    <div>index</div>\n  )\n}\n\nexport default index"],
+  "mappings": ";;;;;;;;AAAA;AAEA,IAAM,QAAQ,MAAM;AAClB,SACE,mDAAC;AAAA,IAAI;AAAA,KAAL;AAAA;AAAA;AAAA;AAAA,SAAU;AAEd;AAEA,IAAO,gBAAQ;",
+  "names": []
+}

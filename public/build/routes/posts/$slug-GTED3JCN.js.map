@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../app/routes/posts/$slug.tsx"],
+  "sourcesContent": ["export default function PostSlug(){\n    return (\n        <main className=\"mx-auto max-w-4xl\">\n            \n        </main>\n    )\n}"],
+  "mappings": ";;;;;;;;AAAA;AAAe,SAAR,WAA2B;AAC9B,SACI,mDAAC;AAAA,IAAK,WAAU;AAAA,KAAhB;AAAA;AAAA;AAAA;AAAA,SAEA;AAER;",
+  "names": []
+}

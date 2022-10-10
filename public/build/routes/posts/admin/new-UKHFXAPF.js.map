@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../app/routes/posts/admin/new.tsx"],
+  "sourcesContent": ["import { Form } from \"@remix-run/react\";\n\nconst inputClassName = `w-full rounded border border-gray-500`\n\nexport default function NewPost() {\n    return <h2>New Post</h2>;\n}"],
+  "mappings": ";;;;;;;;AAAA;AAIe,SAAR,UAA2B;AAC9B,SAAO,mDAAC;AAAA,IAAG;AAAA,KAAJ;AAAA;AAAA;AAAA;AAAA,SAAY;AACvB;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../app/routes/posts/admin/index.tsx"],
+  "sourcesContent": ["\nimport { Link } from \"@remix-run/react\";\n\nexport let loader: LoaderFunction\n\nexport default function AdminIndex() {\n    return (\n      <p>\n        <button className=\"rounded bg-green-600 p-2\">\n          <Link to={\"new\"} className=\"text-white\">\n            Create a new Post\n          </Link>\n        </button>\n      </p>\n    );\n}\n"],
+  "mappings": ";;;;;;;;;AAAA;AAKe,SAAR,aAA8B;AACjC,SACE,mDAAC;AAAA,IACC,6DAAC;AAAA,MAAO,WAAU;AAAA,MAChB,6DAAC;AAAA,QAAK,IAAI;AAAA,QAAO,WAAU;AAAA,QAAa;AAAA,SAAxC;AAAA;AAAA;AAAA;AAAA,aAEA;AAAA,OAHF;AAAA;AAAA;AAAA;AAAA,WAIA;AAAA,KALF;AAAA;AAAA;AAAA;AAAA,SAMA;AAEN;",
+  "names": []
+}

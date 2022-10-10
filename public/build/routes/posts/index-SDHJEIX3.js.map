@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../app/routes/posts/index.tsx"],
+  "sourcesContent": ["\nexport default function Posts() {\n    \n}"],
+  "mappings": ";;;AACe,SAAR,QAAyB;AAEhC;",
+  "names": []
+}

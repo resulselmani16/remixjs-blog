@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../app/routes/posts/admin/new.tsx"],
+  "sourcesContent": ["import { Form } from \"@remix-run/react\";\n\nconst inputClassName = `w-full rounded border border-gray-500 px-2 py-1 text-lg`;\n\nexport default function NewPost() {\n  <Form method=\"post\">\n    <p>\n      <label htmlFor=\"\">\n        Post Title:\n        <input type=\"text\" name=\"title\" className={inputClassName} />\n      </label>\n    </p>\n    \n  </Form>;\n}\n"],
+  "mappings": ";;;;;;;;;AAAA;AAEA,IAAM,iBAAiB;AAER,SAAR,UAA2B;AAChC,qDAAC;AAAA,IAAK,QAAO;AAAA,IACX,6DAAC;AAAA,MACC,6DAAC;AAAA,QAAM,SAAQ;AAAA,QAAG;AAAA;AAAA,UAEhB,mDAAC;AAAA,YAAM,MAAK;AAAA,YAAO,MAAK;AAAA,YAAQ,WAAW;AAAA,aAA3C;AAAA;AAAA;AAAA;AAAA,iBAA2D;AAAA;AAAA,SAF7D;AAAA;AAAA;AAAA;AAAA,aAGA;AAAA,OAJF;AAAA;AAAA;AAAA;AAAA,WAKA;AAAA,KANF;AAAA;AAAA;AAAA;AAAA,SAQA;AACF;",
+  "names": []
+}

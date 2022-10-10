@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../app/routes/posts/admin/new.tsx"],
+  "sourcesContent": ["export default function NewPost() {\n    return <h2></h2>\n}"],
+  "mappings": ";;;;;;;;AAAA;AAAe,SAAR,UAA2B;AAC9B,SAAO,mDAAC,UAAD;AAAA;AAAA;AAAA;AAAA,SAAI;AACf;",
+  "names": []
+}

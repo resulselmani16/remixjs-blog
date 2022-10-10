@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["empty-module:~/services/auth.server", "../../../../../app/routes/posts/admin/index.tsx"],
+  "sourcesContent": ["module.exports = {};", "\nimport type { ActionFunction, LoaderFunction } from \"@remix-run/node\";\nimport { Link } from \"@remix-run/react\";\nimport authenticator from \"~/services/auth.server\";\n\nexport let loader: LoaderFunction = async ({request}) => {\n  return await authenticator.isAuthenticated(request, {\n    failureRedirect: \"/login\",\n  });\n};\n\nexport const action: ActionFunction = async\n\nexport default function AdminIndex() {\n    return (\n      <p>\n        <button className=\"rounded bg-green-600 p-2\">\n          <Link to={\"new\"} className=\"text-white\">\n            Create a new Post\n          </Link>\n        </button>\n      </p>\n    );\n}\n"],
+  "mappings": ";;;;;;;;;;AAAA;AAAA;AAAA,WAAO,UAAU,CAAC;AAAA;AAAA;;;ACGlB,kBAA0B;AAH1B;AAWO,IAAM,SAAyB;AAEvB,SAAR,aAA8B;AACjC,SACE,mDAAC;AAAA,IACC,6DAAC;AAAA,MAAO,WAAU;AAAA,MAChB,6DAAC;AAAA,QAAK,IAAI;AAAA,QAAO,WAAU;AAAA,QAAa;AAAA,SAAxC;AAAA;AAAA;AAAA;AAAA,aAEA;AAAA,OAHF;AAAA;AAAA;AAAA;AAAA,WAIA;AAAA,KALF;AAAA;AAAA;AAAA;AAAA,SAMA;AAEN;",
+  "names": []
+}

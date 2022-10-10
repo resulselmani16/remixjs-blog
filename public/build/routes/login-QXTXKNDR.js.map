@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/routes/login.tsx"],
+  "sourcesContent": ["import { ActionFunction, json, LoaderFunction } from \"@remix-run/node\";\nimport { useLoaderData } from \"@remix-run/react\";\nimport authenticator from \"~/services/auth.server\";\nimport { sessionStorage } from \"~/session.server\";\n\nexport const loader: LoaderFunction = async ({request}) => {\n  await authenticator.isAuthenticated(request, {\n    successRedirect: \"/admin\"\n  });\n\n  const session = await sessionStorage.getSession(request.headers.get(\"Cookie\"));\n\n  const error = session.get(\"sessionErrorKey\");\n  return json<any>({error});\n};\n\nexport const action: ActionFunction = async({request, context}) => {\n  const resp = await authenticator.authenticate(\"form\", request, {\n    successRedirect: \"/admin\",\n    failureRedirect: \"/login\",\n    throwOnError: true,\n    context\n  });\n  console.log(resp);\n  return resp;\n}\n\nexport default function LoginPage() {\n  const loaderData = useLoaderData();\n  console.log(loaderData);\n  \n\n\n}"],
+  "mappings": ";;;;;;;;;;;;;;AAEA,kBAA0B;AAC1B,qBAA+B;AAwBhB,SAAR,YAA6B;AAClC,QAAM,aAAa,cAAc;AACjC,UAAQ,IAAI,UAAU;AAIxB;",
+  "names": []
+}

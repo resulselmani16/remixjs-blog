@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../app/routes/posts/admin/new.tsx"],
+  "sourcesContent": ["import { Form } from \"@remix-run/react\";\nimport { redirect } from \"@remix-run/server-runtime\";\n\nimport { createPost } from \"~/models/post.server\";\n\nexport const action = async ({ request } : {request: any}) => {\n  const formData = await request.formData();\n  const title = formData.get(\"title\");\n  const slug = formData.get(\"slug\");\n  const markdown = formData.get(\"markdown\");\n\n  await createPost({title, slug, markdown});\n\n  return redirect(\"/posts/admin\")\n}\n\nconst inputClassName = `w-full rounded border border-gray-500 px-2 py-1 text-lg`;\n\nexport default function NewPost() {\n\n}\n"],
+  "mappings": ";;;;;;;;AAGA,kBAA2B;AAeZ,SAAR,UAA2B;AAElC;",
+  "names": []
+}

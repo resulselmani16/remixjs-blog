@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../app/routes/posts/admin/index.tsx"],
+  "sourcesContent": ["import { Link } from \"@remix-run/react\";\n\nexport default function AdminIndex() {\n    \n}"],
+  "mappings": ";;;AAEe,SAAR,aAA8B;AAErC;",
+  "names": []
+}

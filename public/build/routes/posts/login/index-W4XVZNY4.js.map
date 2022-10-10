@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../app/routes/posts/login/index.tsx"],
+  "sourcesContent": ["import type { LoaderFunction } from \"@remix-run/node\";\nimport React from \"react\";\n\nconst loader: LoaderFunction = async ({ params }) => {\n    if(params.username === \"admin@frakton.com\" && params.password === \"frakton123\"){\n        \n    }\n};\n\nconst index = () => {\n  return <div>index</div>;\n};\n\nexport default index;\n"],
+  "mappings": ";;;;;;;;AAAA;AASA,IAAM,QAAQ,MAAM;AAClB,SAAO,mDAAC;AAAA,IAAI;AAAA,KAAL;AAAA;AAAA;AAAA;AAAA,SAAU;AACnB;AAEA,IAAO,gBAAQ;",
+  "names": []
+}

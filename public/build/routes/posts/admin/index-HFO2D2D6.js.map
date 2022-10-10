@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["empty-module:~/services/auth.server", "../../../../../app/routes/posts/admin/index.tsx"],
+  "sourcesContent": ["module.exports = {};", "import type { ActionFunction, LoaderFunction } from \"@remix-run/node\";\nimport { Form, Link } from \"@remix-run/react\";\nimport authenticator from \"~/services/auth.server\";\n\nexport let loader: LoaderFunction = async ({ request }) => {\n  return await authenticator.isAuthenticated(request, {\n    failureRedirect: \"/login\",\n  });\n};\n\nexport const action: ActionFunction = async ({ request }) => {\n  await authenticator.logout(request, { redirectTo: \"/login\" });\n};\n\nexport default function AdminIndex() {\n  return (\n    <>\n      <p>\n        <button className=\"rounded bg-green-600 p-2\">\n          <Link to={\"new\"} className=\"text-white\">\n            ;\n            Create a new Post\n          </Link>\n        </button>\n      </p>\n      <Form method=\"post\">\n        <button>Log out</button>\n      </Form>\n    </>\n  );\n}\n"],
+  "mappings": ";;;;;;;;;;;AAAA;AAAA;AAAA,WAAO,UAAU,CAAC;AAAA;AAAA;;;ACElB,kBAA0B;AAF1B;AAce,SAAR,aAA8B;AACnC,SACE;AAAA,IACE;AAAA,yDAAC;AAAA,QACC,6DAAC;AAAA,UAAO,WAAU;AAAA,UAChB,6DAAC;AAAA,YAAK,IAAI;AAAA,YAAO,WAAU;AAAA,YAAa;AAAA,aAAxC;AAAA;AAAA;AAAA;AAAA,iBAGA;AAAA,WAJF;AAAA;AAAA;AAAA;AAAA,eAKA;AAAA,SANF;AAAA;AAAA;AAAA;AAAA,aAOA;AAAA,MACA,mDAAC;AAAA,QAAK,QAAO;AAAA,QACX,6DAAC;AAAA,UAAO;AAAA,WAAR;AAAA;AAAA;AAAA;AAAA,eAAe;AAAA,SADjB;AAAA;AAAA;AAAA;AAAA,aAEA;AAAA;AAAA,KAXF;AAAA;AAAA;AAAA;AAAA,SAYA;AAEJ;",
+  "names": []
+}

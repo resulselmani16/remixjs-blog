@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../app/routes/posts/admin/index.tsx"],
+  "sourcesContent": ["import { Link } from \"@remix-run/react\";\nimport NewPost from \"./new\";\n\nexport default function AdminIndex() {\n    return(\n        <p>\n            <Link to={\"new\"} className=\"text-blue-600 underline\">Create a new Post</Link>\n            <NewPost />\n        </p>\n    )\n}"],
+  "mappings": ";;;;;;;;;;;;;AAAA;AAGe,SAAR,aAA8B;AACjC,SACI,mDAAC;AAAA,IACG;AAAA,yDAAC;AAAA,QAAK,IAAI;AAAA,QAAO,WAAU;AAAA,QAA0B;AAAA,SAArD;AAAA;AAAA;AAAA;AAAA,aAAsE;AAAA,MACtE,mDAAC,aAAD;AAAA;AAAA;AAAA;AAAA,aAAS;AAAA;AAAA,KAFb;AAAA;AAAA;AAAA;AAAA,SAGA;AAER;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../app/routes/posts/admin/$slug.tsx"],
+  "sourcesContent": ["\n\nexport default function ModifyPost(){\n    \n}"],
+  "mappings": ";;;AAEe,SAAR,aAA6B;AAEpC;",
+  "names": []
+}

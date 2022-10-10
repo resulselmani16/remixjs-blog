@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../app/routes/posts/login.tsx"],
+  "sourcesContent": ["import React from 'react'\n\nconst login = () => {\n  return (\n    <div>login</div>\n  )\n}\n\nexport default login"],
+  "mappings": ";;;;;;;;AAAA;AAEA,IAAM,QAAQ,MAAM;AAClB,SACE,mDAAC;AAAA,IAAI;AAAA,KAAL;AAAA;AAAA;AAAA;AAAA,SAAU;AAEd;AAEA,IAAO,gBAAQ;",
+  "names": []
+}

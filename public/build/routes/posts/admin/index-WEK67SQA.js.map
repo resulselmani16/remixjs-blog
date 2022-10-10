@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../app/routes/posts/admin/index.tsx"],
+  "sourcesContent": ["import { ActionFunction, redirect } from \"@remix-run/node\";\nimport { Link, useLoaderData } from \"@remix-run/react\";\nimport invariant from \"tiny-invariant\";\n\nexport const action: ActionFunction = async ({ request, params }) => {\n  invariant(params.username, \"Username is required\");\n  const formData = await request.formData();\n  if (\n    formData.get(\"username\") === \"admin@frakton.com\" &&\n    formData.get(\"password\") === \"frakton123\"\n  ) {\n    return redirect(\"/posts/admin\");\n  } else {\n    return redirect(\"/posts/login\");\n  }\n};\n\nexport default function AdminIndex() {\n  const data = useLoaderData();\n\n  if (data.username) {\n    return redirect(\"/posts/login\");\n  } else {\n\n  }\n}\n"],
+  "mappings": ";;;;;;;;;;;;AAAA,kBAAyC;AAiB1B,SAAR,aAA8B;AACnC,QAAM,OAAO,cAAc;AAE3B,MAAI,KAAK,UAAU;AACjB,eAAO,sBAAS,cAAc;AAAA,EAChC,OAAO;AAAA,EAEP;AACF;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../app/routes/posts/index.tsx"],
+  "sourcesContent": ["import { json } from \"@remix-run/node\";\nimport { useLoaderData } from \"@remix-run/react\";\n\n\nexport default function Posts() {\n    return(\n        <main>\n            <h1>Posts</h1>\n        </main>\n    )\n}"],
+  "mappings": ";;;;;;;;AAAA;AAIe,SAAR,QAAyB;AAC5B,SACI,mDAAC;AAAA,IACG,6DAAC;AAAA,MAAG;AAAA,OAAJ;AAAA;AAAA;AAAA;AAAA,WAAS;AAAA,KADb;AAAA;AAAA;AAAA;AAAA,SAEA;AAER;",
+  "names": []
+}
