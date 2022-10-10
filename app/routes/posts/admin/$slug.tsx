@@ -117,13 +117,16 @@ export default function NewPost() {
   const [slug, setSlug] = useState("");
   const [markdown, setMarkdown] = useState("");
   const [hasMargin, setHasMargin] = useState(true);
-  const [isValid, setIsValid] = useState(false);
+  let isValid = false;
 
   const handleHover = () => {
     if (title === "" || slug === "" || markdown === "") {
       setHasMargin(!hasMargin);
     }
   };
+  if (title !== "" && slug !== "" && markdown !== "") {
+    isValid = true;
+  }
 
   return (
     <>
@@ -228,7 +231,7 @@ export default function NewPost() {
                   hasMargin ? "margin-right-none" : "margin-right"
                 } ${
                   isValid
-                    ? "bg-green-500 hover:bg-green-600 focus:bg-green-400 disabled:bg-green-300"
+                    ? "margin-right-none bg-green-500 hover:bg-green-600 focus:bg-green-400 disabled:bg-green-300"
                     : "bg-blue-500 hover:bg-blue-600 focus:bg-blue-400 disabled:bg-blue-300"
                 } rounded  py-2 px-4 text-white disabled:bg-blue-300`}
                 disabled={isCreating || isUpdating}
