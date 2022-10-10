@@ -55,3 +55,7 @@ testem.log
 .DS_Store
 .vscode/settings.json
 .vscode/launch.json
+.env
+.env.example
+.env.local
+.env.staging
